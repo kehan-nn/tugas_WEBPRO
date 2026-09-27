@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jurnal Saham Pribadi - Tambah Jurnal Baru</title>
+</head>
+<body>
+
+  <header class="header-utama">
+    <h1>Jurnal Saham Pribadi</h1>
+    <p>Formulir Input Transaksi Baru</p>
+
+    <nav class="navigasi-utama">
+      <ul>
+        <li><a href="index.html">Beranda / Riwayat Trading</a></li>
+        <li><a href="tambahjurnal.html">Tambah Jurnal Baru</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article class="form-jurnal">
+      <h2>Form Jurnal Trading Baru</h2>
+      <p>Lengkapi data transaksi di bawah ini untuk mencatat aktivitas jual beli saham Anda.</p>
+
+      <form class="form-input-jurnal" action="#" method="post">
+
+        <div class="grup-input">
+          <label for="tanggal">Tanggal Transaksi</label>
+          <input type="date" id="tanggal" name="tanggal" required>
+        </div>
+
+        <div class="grup-input">
+          <label for="ticker">Ticker / Kode Saham</label>
+          <input type="text" id="ticker" name="ticker" maxlength="4" placeholder="Contoh: SUPA" required>
+        </div>
+
+        <div class="grup-input">
+          <label for="jumlah-lot">Jumlah Lot</label>
+          <input type="number" id="jumlah-lot" name="jumlah-lot" min="1" step="1" placeholder="Contoh: 10" required>
+        </div>
+
+        <div class="grup-input">
+          <label for="harga-beli">Harga Beli per Lembar (Rp)</label>
+          <input type="number" id="harga-beli" name="harga-beli" min="1" step="1" placeholder="Contoh: 292" required>
+        </div>
+
+        <div class="grup-input">
+          <label for="sekuritas">Sekuritas / Broker</label>
+          <select id="sekuritas" name="sekuritas">
+            <option value="stockbit">Stockbit</option>
+            <option value="indopremier">IndoPremier</option>
+            <option value="ajaib">Ajaib</option>
+            <option value="mirae">Mirae Asset Sekuritas</option>
+          </select>
+        </div>
+
+        <fieldset class="grup-radio">
+          <legend>Jenis Transaksi</legend>
+
+          <input type="radio" id="beli-reguler" name="jenis-transaksi" value="reguler" checked>
+          <label for="beli-reguler">Beli Reguler (Pasar Sekunder)</label>
+          <br>
+          <input type="radio" id="beli-ipo" name="jenis-transaksi" value="ipo">
+          <label for="beli-ipo">Hasil Penjatahan IPO</label>
+        </fieldset>
+
+        <div class="grup-input">
+          <label for="status">Status Saat Ini</label>
+          <select id="status" name="status">
+            <option value="hold">Hold</option>
+            <option value="jual">Jual</option>
+          </select>
+        </div>
+
+        <div class="grup-input">
+          <label for="trading-plan">Alasan Beli / Trading Plan</label>
+          <textarea id="trading-plan" name="trading-plan" rows="6" cols="50" placeholder="Contoh: Beli karena laporan keuangan kuartal 3 bagus dan berhasil tembus resisten di harga 300."></textarea>
+        </div>
+
+        <div class="grup-tombol">
+          <button type="submit">Simpan Jurnal</button>
+          <button type="reset">Bersihkan Form</button>
+        </div>
+
+      </form>
+    </article>
+  </main>
+
+  <footer class="footer-utama">
+    <p>2026 Jurnal Saham Saya</p>
+  </footer>
+
+</body>
+</html>
