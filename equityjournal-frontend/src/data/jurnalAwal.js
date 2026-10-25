@@ -1,0 +1,48 @@
+const jurnalAwal = [
+  {
+    id: 1,
+    tanggal: '2026-09-02',
+    ticker: 'SUPA',
+    namaPerusahaan: 'PT Sumber Alfaria Trijaya',
+    harga: 292,
+    lot: 50,
+    sekuritas: 'Stockbit',
+    status: 'hold',
+    alasan: 'Harga menembus resisten 300 dengan volume naik. Target take profit 340, cut loss 270.',
+  },
+  {
+    id: 2,
+    tanggal: '2026-09-10',
+    ticker: 'RLCO',
+    namaPerusahaan: 'PT Abadi Lestari Indonesia',
+    harga: 855,
+    lot: 20,
+    sekuritas: 'Stockbit',
+    status: 'jual',
+    alasan: 'Trading jangka pendek berdasarkan analisis teknikal harga dan volume.',
+  },
+  {
+    id: 3,
+    tanggal: '2026-09-18',
+    ticker: 'BBCA',
+    namaPerusahaan: 'PT Bank Central Asia Tbk',
+    harga: 10150,
+    lot: 10,
+    sekuritas: 'Stockbit',
+    status: 'hold',
+    alasan: 'Saham berkapitalisasi besar dengan likuiditas tinggi, dipegang untuk jangka menengah hingga panjang.',
+  },
+  {
+    id: 4,
+    tanggal: '2026-09-24',
+    ticker: 'ANTM',
+    namaPerusahaan: 'PT Aneka Tambang Tbk',
+    harga: 1590,
+    lot: 30,
+    sekuritas: 'Stockbit',
+    status: 'jual',
+    alasan: 'Momentum teknikal dan pergerakan harga komoditas. Level take profit dan cut loss sudah ditetapkan.',
+  },
+]
+
+export default jurnalAwal
