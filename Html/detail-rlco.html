@@ -56,10 +56,15 @@
       <div class="col-12">
         <section class="card evaluasi-trading">
           <div class="card-body">
-          <h2 class="h5">Narasi Evaluasi</h2>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h2 class="h5 mb-0">Narasi Evaluasi</h2>
+            <button type="button" id="btn-toggle-evaluasi" class="btn btn-sm btn-filter">Sembunyikan</button>
+          </div>
+          <div id="isi-evaluasi">
           <p>Saham RLCO dibeli pada harga 855 sebanyak 20 lot dengan total nilai Rp 1.710.000, berdasarkan analisis teknikal terhadap pergerakan harga dan volume perdagangan.</p>
           <p>Transaksi ini bersifat jangka pendek dengan target keuntungan dan batas kerugian yang sudah ditetapkan sejak awal sebelum membeli.</p>
           <p>Posisi kini berstatus Jual, artinya transaksi sudah ditutup. Hasil akhir dijadikan bahan evaluasi untuk memperbaiki disiplin entry dan exit pada transaksi berikutnya.</p>
+          </div>
           </div>
         </section>
       </div>
@@ -71,5 +76,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

@@ -45,3 +45,9 @@ a:hover{text-decoration:underline}
 .form-control:focus,.form-select:focus{border-color:#13a86b;box-shadow:0 0 0 .25rem rgba(19,168,107,.2)}
 
 .footer-utama{margin-top:40px;padding:18px;text-align:center;font-size:.85rem;color:#c7d3e6;background:var(--warna-utama)}
+
+/* ===== Tambahan Tugas Bab 5 (interaktivitas) ===== */
+.btn-filter{border:1px solid var(--warna-utama);color:var(--warna-utama);background:#fff;font-weight:600}
+.btn-filter:hover,.btn-filter.active{background:var(--warna-utama);color:#fff}
+.baris-detail td{background:#f7f9fc}
+.table-riwayat tbody tr.baris-detail:hover td{background:#f7f9fc}

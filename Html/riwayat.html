@@ -33,9 +33,36 @@
       <a href="tambahjurnal.html" class="btn btn-navy">Tambah jurnal</a>
     </div>
 
+    <div id="notif" class="alert alert-success" role="alert" style="display:none"></div>
+
+    <div class="card mb-3">
+      <div class="card-body">
+        <div class="row g-2 align-items-center">
+          <div class="col-12 col-lg-auto">
+            <div class="btn-group" role="group" aria-label="Filter status">
+              <button type="button" class="btn btn-filter active" data-status="semua">Semua (<span id="jml-semua">0</span>)</button>
+              <button type="button" class="btn btn-filter" data-status="hold">Hold (<span id="jml-hold">0</span>)</button>
+              <button type="button" class="btn btn-filter" data-status="jual">Jual (<span id="jml-jual">0</span>)</button>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg">
+            <input type="search" id="cari-ticker" class="form-control" placeholder="Cari ticker, contoh: BBCA" aria-label="Cari ticker" maxlength="4">
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <select id="urut-data" class="form-select" aria-label="Urutkan data">
+              <option value="tanggal-desc">Tanggal terbaru</option>
+              <option value="tanggal-asc">Tanggal terlama</option>
+              <option value="nilai-desc">Nilai terbesar</option>
+              <option value="nilai-asc">Nilai terkecil</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="card">
       <div class="table-responsive">
-        <table class="table table-hover table-striped align-middle mb-0 table-riwayat">
+        <table class="table table-hover align-middle mb-0 table-riwayat">
           <thead>
             <tr>
               <th scope="col">Tanggal</th>
@@ -44,43 +71,31 @@
               <th scope="col" class="text-end">Jumlah Lot</th>
               <th scope="col" class="text-end">Total Nilai</th>
               <th scope="col" class="text-center">Status</th>
+              <th scope="col" class="text-center">Aksi</th>
             </tr>
           </thead>
-          <tbody>
-          <tr>
-            <td>2026-09-02</td>
-            <td><a href="detail-supa.html" class="ticker">SUPA</a></td>
-            <td class="text-end">Rp 292</td>
-            <td class="text-end">50</td>
-            <td class="text-end">Rp 1.460.000</td>
-            <td class="text-center"><span class="badge text-bg-success">Hold</span></td>
-          </tr>
-          <tr>
-            <td>2026-09-10</td>
-            <td><a href="detail-rlco.html" class="ticker">RLCO</a></td>
-            <td class="text-end">Rp 855</td>
-            <td class="text-end">20</td>
-            <td class="text-end">Rp 1.710.000</td>
-            <td class="text-center"><span class="badge text-bg-danger">Jual</span></td>
-          </tr>
-          <tr>
-            <td>2026-09-18</td>
-            <td><a href="detail-bbca.html" class="ticker">BBCA</a></td>
-            <td class="text-end">Rp 10.150</td>
-            <td class="text-end">10</td>
-            <td class="text-end">Rp 10.150.000</td>
-            <td class="text-center"><span class="badge text-bg-success">Hold</span></td>
-          </tr>
-          <tr>
-            <td>2026-09-24</td>
-            <td><a href="detail-antm.html" class="ticker">ANTM</a></td>
-            <td class="text-end">Rp 1.590</td>
-            <td class="text-end">30</td>
-            <td class="text-end">Rp 4.770.000</td>
-            <td class="text-center"><span class="badge text-bg-danger">Jual</span></td>
-          </tr>
-          </tbody>
+          <tbody id="tabel-riwayat-body"></tbody>
         </table>
+      </div>
+      <div class="card-footer d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <span class="small text-secondary" id="ringkasan-tabel"></span>
+        <button type="button" id="btn-reset-data" class="btn btn-sm btn-outline-secondary">Reset data </button>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-hapus" tabindex="-1" aria-labelledby="judul-modal-hapus" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title h5" id="judul-modal-hapus">Hapus jurnal?</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+          </div>
+          <div class="modal-body">Jurnal <strong id="teks-hapus"></strong> akan dihapus dari tampilan. Lanjutkan?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
+            <button type="button" class="btn btn-danger" id="konfirmasi-hapus">Ya, hapus</button>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -90,5 +105,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

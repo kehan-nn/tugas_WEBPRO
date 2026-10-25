@@ -56,10 +56,15 @@
       <div class="col-12">
         <section class="card evaluasi-trading">
           <div class="card-body">
-          <h2 class="h5">Narasi Evaluasi</h2>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h2 class="h5 mb-0">Narasi Evaluasi</h2>
+            <button type="button" id="btn-toggle-evaluasi" class="btn btn-sm btn-filter">Sembunyikan</button>
+          </div>
+          <div id="isi-evaluasi">
           <p>Saham ANTM dibeli pada harga 1.590 sebanyak 30 lot dengan total nilai Rp 4.770.000, dengan mempertimbangkan pergerakan harga komoditas dan momentum teknikal saham.</p>
           <p>Sejak awal ditetapkan level Take Profit dan Cut Loss untuk membatasi risiko, karena saham sektor tambang cenderung bergerak volatil.</p>
           <p>Posisi kini berstatus Jual, artinya transaksi sudah ditutup. Hasilnya dicatat sebagai bahan evaluasi untuk transaksi berikutnya.</p>
+          </div>
           </div>
         </section>
       </div>
@@ -71,5 +76,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

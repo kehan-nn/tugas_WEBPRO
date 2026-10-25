@@ -56,10 +56,15 @@
       <div class="col-12">
         <section class="card evaluasi-trading">
           <div class="card-body">
-          <h2 class="h5">Narasi Evaluasi</h2>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h2 class="h5 mb-0">Narasi Evaluasi</h2>
+            <button type="button" id="btn-toggle-evaluasi" class="btn btn-sm btn-filter">Sembunyikan</button>
+          </div>
+          <div id="isi-evaluasi">
           <p>Saham BBCA dibeli pada harga 10.150 sebanyak 10 lot dengan total nilai Rp 10.150.000. BBCA dipilih karena termasuk saham berkapitalisasi besar dengan likuiditas tinggi dan fundamental perbankan yang kuat.</p>
           <p>Strategi pembelian ini lebih diarahkan untuk jangka menengah hingga panjang, sehingga fluktuasi harga harian tidak dijadikan dasar utama keputusan.</p>
           <p>Hingga saat ini posisi masih berstatus Hold karena rencana awal belum berubah dan belum ada sinyal yang mengharuskan posisi ditutup.</p>
+          </div>
           </div>
         </section>
       </div>
@@ -71,5 +76,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
